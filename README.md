@@ -1,12 +1,14 @@
 # nosub
 
-[English](README.md) · [Português](docs/README.pt.md) · [Español](docs/README.es.md) · [Français](docs/README.fr.md) · [Deutsch](docs/README.de.md) · [Italiano](docs/README.it.md) · [Polski](docs/README.pl.md) · [Русский](docs/README.ru.md) · [Türkçe](docs/README.tr.md) · [Bahasa Indonesia](docs/README.id.md) · [हिन्दी](docs/README.hi.md) · [中文](docs/README.zh.md) · [日本語](docs/README.ja.md) · [한국어](docs/README.ko.md)
-
 Three small dev tools in one 3 MB binary. No account, no telemetry, no monthly plan. It runs on your machine and never opens a network connection of its own.
 
 - `nosub env` keeps secrets out of git
 - `nosub schema` exports a database schema to Markdown you can paste into an LLM
 - `nosub svg` turns SVG files into clean JSX or Tailwind components
+
+## Why
+
+Each of these jobs is small enough to run locally, and none of them should need an account, a website upload or a monthly plan. So they live in one binary with no dependencies outside the Go standard library.
 
 ## Install
 
@@ -127,6 +129,8 @@ nosub svg ./icons -o ./src/icons --ts
 - Live database URLs need `pg_dump` or `mysqldump` in your `PATH`. Dump files and SQLite need nothing.
 - A SQLite database in WAL mode may have recent schema changes that are still in the `-wal` file. Close the app using it first.
 - `size-*` classes need Tailwind 3.4 or newer.
+- The binaries aren't signed, so Windows SmartScreen or macOS Gatekeeper may warn you if you download one in a browser. The install scripts verify the checksum.
+- Only the Windows binary has been run by hand. Tests pass on Windows, macOS and Linux in CI.
 
 ## Languages
 
