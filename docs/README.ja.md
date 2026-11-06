@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Português](README.pt.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Bahasa Indonesia](README.id.md) · [हिन्दी](README.hi.md) · [中文](README.zh.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-4 MB の単一バイナリに凝縮された3つのローカル開発ツール。アカウント登録なし、テレメトリなし、月額課金なし。ローカルマシン上で直接動作し、自身で勝手に外部ネットワークへ接続することもありません。
+3 MB の単一バイナリに凝縮された3つのローカル開発ツール。アカウント登録なし、テレメトリなし、月額課金なし。ローカルマシン上で直接動作し、自身で勝手に外部ネットワークへ接続することもありません。
 
 - `nosub env` シークレットや機密情報の git への混入を防止
 - `nosub schema` DB スキーマを LLM にそのまま渡せる Markdown 形式でエクスポート

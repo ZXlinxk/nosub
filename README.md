@@ -2,7 +2,7 @@
 
 [English](README.md) · [Português](docs/README.pt.md) · [Español](docs/README.es.md) · [Français](docs/README.fr.md) · [Deutsch](docs/README.de.md) · [Italiano](docs/README.it.md) · [Polski](docs/README.pl.md) · [Русский](docs/README.ru.md) · [Türkçe](docs/README.tr.md) · [Bahasa Indonesia](docs/README.id.md) · [हिन्दी](docs/README.hi.md) · [中文](docs/README.zh.md) · [日本語](docs/README.ja.md) · [한국어](docs/README.ko.md)
 
-Three small dev tools in one 4 MB binary. No account, no telemetry, no monthly plan. It runs on your machine and never opens a network connection of its own.
+Three small dev tools in one 3 MB binary. No account, no telemetry, no monthly plan. It runs on your machine and never opens a network connection of its own.
 
 - `nosub env` keeps secrets out of git
 - `nosub schema` exports a database schema to Markdown you can paste into an LLM

@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Português](README.pt.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Bahasa Indonesia](README.id.md) · [हिन्दी](README.hi.md) · [中文](README.zh.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-Tiga perkakas dev lokal dalam satu binary berukuran 4 MB. Tanpa akun, tanpa telemetri, tanpa langganan bulanan. Berjalan langsung di komputermu dan tidak pernah membuka koneksi jaringan sendiri.
+Tiga perkakas dev lokal dalam satu binary berukuran 3 MB. Tanpa akun, tanpa telemetri, tanpa langganan bulanan. Berjalan langsung di komputermu dan tidak pernah membuka koneksi jaringan sendiri.
 
 - `nosub env` mencegah secret dan kunci kredensial bocor ke git
 - `nosub schema` mengekspor skema database ke Markdown yang siap disalin ke LLM

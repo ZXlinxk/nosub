@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Português](README.pt.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Bahasa Indonesia](README.id.md) · [हिन्दी](README.hi.md) · [中文](README.zh.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-4 MB 단일 바이너리에 담긴 3가지 로컬 개발 도구. 계정 불필요, 텔레메트리 없음, 월간 구독 없음. 사용자 로컬 머신에서만 작동하며 자체적인 네트워크 연결을 절대 열지 않습니다.
+3 MB 단일 바이너리에 담긴 3가지 로컬 개발 도구. 계정 불필요, 텔레메트리 없음, 월간 구독 없음. 사용자 로컬 머신에서만 작동하며 자체적인 네트워크 연결을 절대 열지 않습니다.
 
 - `nosub env` 비밀 정보 및 API 키가 git에 커밋되는 것을 방지
 - `nosub schema` LLM에 바로 붙여넣기 좋은 깔끔한 Markdown으로 DB 스키마 추출

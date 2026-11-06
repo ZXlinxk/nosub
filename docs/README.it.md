@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Português](README.pt.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Bahasa Indonesia](README.id.md) · [हिन्दी](README.hi.md) · [中文](README.zh.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-Tre piccoli strumenti di sviluppo locali in un singolo eseguibile da 4 MB. Nessun account, nessuna telemetria, nessun abbonamento. Gira sulla tua macchina e non apre mai connessioni di rete di sua iniziativa.
+Tre piccoli strumenti di sviluppo locali in un singolo eseguibile da 3 MB. Nessun account, nessuna telemetria, nessun abbonamento. Gira sulla tua macchina e non apre mai connessioni di rete di sua iniziativa.
 
 - `nosub env` impedisce ai segreti di finire nei repository git
 - `nosub schema` esporta lo schema del database in formato Markdown ottimizzato per i prompt degli LLM

@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Português](README.pt.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Bahasa Indonesia](README.id.md) · [हिन्दी](README.hi.md) · [中文](README.zh.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-4 MB'lık tek bir binary içinde üç küçük yerel geliştirici aracı. Hesap yok, telemetri yok, aylık abonelik yok. Doğrudan kendi makinenizde çalışır ve asla kendi başına ağ bağlantısı açmaz.
+3 MB'lık tek bir binary içinde üç küçük yerel geliştirici aracı. Hesap yok, telemetri yok, aylık abonelik yok. Doğrudan kendi makinenizde çalışır ve asla kendi başına ağ bağlantısı açmaz.
 
 - `nosub env` gizli anahtarların git'e sızmasını önler
 - `nosub schema` veritabanı şemasını LLM'e yapıştırmaya uygun Markdown olarak dışa aktarır

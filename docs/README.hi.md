@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Português](README.pt.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Bahasa Indonesia](README.id.md) · [हिन्दी](README.hi.md) · [中文](README.zh.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-एक ही 4 MB बाइनरी में तीन छोटे लोकल देव टूल्स। कोई अकाउंट नहीं, कोई टेलीमेट्री नहीं, कोई मासिक सब्सक्रिप्शन नहीं। यह आपकी मशीन पर चलता है और कभी भी खुद से कोई नेटवर्क कनेक्शन नहीं खोलता।
+एक ही 3 MB बाइनरी में तीन छोटे लोकल देव टूल्स। कोई अकाउंट नहीं, कोई टेलीमेट्री नहीं, कोई मासिक सब्सक्रिप्शन नहीं। यह आपकी मशीन पर चलता है और कभी भी खुद से कोई नेटवर्क कनेक्शन नहीं खोलता।
 
 - `nosub env` सीक्रेट्स और कीज़ को git में जाने से रोकता है
 - `nosub schema` डेटाबेस स्कीमा को Markdown में एक्सपोर्ट करता है जिसे आप सीधे LLM में पेस्ट कर सकते हैं

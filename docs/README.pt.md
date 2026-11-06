@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Português](README.pt.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Bahasa Indonesia](README.id.md) · [हिन्दी](README.hi.md) · [中文](README.zh.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-Três ferramentas locais em um binário de 4 MB. Sem conta, sem telemetria, sem mensalidade. Roda direto na sua máquina e nunca abre conexões de rede por conta própria.
+Três ferramentas locais em um binário de 3 MB. Sem conta, sem telemetria, sem mensalidade. Roda direto na sua máquina e nunca abre conexões de rede por conta própria.
 
 - `nosub env` evita que segredos cheguem ao git
 - `nosub schema` exporta o schema do banco para Markdown legível por LLMs

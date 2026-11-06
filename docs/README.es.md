@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Português](README.pt.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Bahasa Indonesia](README.id.md) · [हिन्दी](README.hi.md) · [中文](README.zh.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-Tres herramientas de desarrollo locales en un binario de 4 MB. Sin cuentas, sin telemetría, sin suscripciones. Corre en tu máquina y nunca abre conexiones de red por su cuenta.
+Tres herramientas de desarrollo locales en un binario de 3 MB. Sin cuentas, sin telemetría, sin suscripciones. Corre en tu máquina y nunca abre conexiones de red por su cuenta.
 
 - `nosub env` evita que se filtren secretos a git
 - `nosub schema` exporta el esquema de la base de datos a Markdown listo para pasar a un LLM

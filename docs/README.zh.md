@@ -2,7 +2,7 @@
 
 [English](../README.md) · [Português](README.pt.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Bahasa Indonesia](README.id.md) · [हिन्दी](README.hi.md) · [中文](README.zh.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-仅 4 MB 的单文件本地开发工具包，集成三大实用功能。无需注册，无遥测，无月费。完全在你的本地机器运行，从不主动发起网络连接。
+仅 3 MB 的单文件本地开发工具包，集成三大实用功能。无需注册，无遥测，无月费。完全在你的本地机器运行，从不主动发起网络连接。
 
 - `nosub env` 防止密钥意外提交到 git
 - `nosub schema` 将数据库结构导出为适合直接粘贴给 LLM 的 Markdown
