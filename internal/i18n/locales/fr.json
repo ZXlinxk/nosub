@@ -1,0 +1,23 @@
+{
+  "help.main": "nosub %s - petits outils dev locaux, sans compte, sans abonnement\n\nUtilisation :\n  nosub env     empêche les secrets d'atteindre git\n  nosub schema  exporte un schéma de base de données en Markdown pour LLMs\n  nosub svg     transforme les fichiers SVG en composants JSX ou Tailwind propres\n  nosub version affiche la version\n\nExécutez \"nosub <commande> --help\" pour plus de détails.\nUtilisez --lang <code|lang> ou NOSUB_LANG pour changer la langue (%s).\n",
+  "help.env": "Utilisation :\n  nosub env scan [chemin]     analyse un dossier à la recherche de secrets\n    --staged                  uniquement ce qui est indexé pour le commit\n    --history                 chaque commit de l'historique du dépôt\n    --json                    sortie exploitable par machine en JSON\n  nosub env hook install      bloque les mauvais commits via un hook pre-commit\n    --force                   remplace un hook existant\n  nosub env hook uninstall    supprime le hook\n  nosub env example           génère .env.example depuis .env sans les valeurs\n    --in <fichier>            fichier source (par défaut .env)\n    --out <fichier>           fichier cible (par défaut .env.example)\n  nosub env gitignore         ajoute les règles .env au .gitignore\n\nIgnorez un faux positif avec \"nosub:allow\" sur la ligne, ou listez les chemins dans .nosubignore.\nCodes de sortie : 0 propre, 1 secrets trouvés, 2 erreur.\n",
+  "help.schema": "Utilisation :\n  nosub schema <cible> [options]\n\nCibles :\n  app.db                      fichier SQLite\n  dump.sql                    sortie de pg_dump, mysqldump ou .schema sqlite\n  -                           SQL depuis stdin\n  postgres://user:pw@host/db  nécessite pg_dump dans le PATH\n  mysql://user:pw@host/db     nécessite mysqldump dans le PATH\n\nOptions :\n  -o <fichier>                écrit dans un fichier plutôt que stdout\n  --compact                   une ligne par table, sans types\n  --only <a,b>                uniquement ces tables (globs autorisés)\n  --exclude <a,b>             exclut ces tables (globs autorisés)\n",
+  "help.svg": "Utilisation :\n  nosub svg <fichier.svg|dossier|-> [options]\n\nOptions :\n  -o <chemin>                 fichier de sortie, ou dossier si conversion multiple\n  --name <Nom>                nom du composant (par défaut : dérivé du fichier)\n  --ts                        TSX avec props typées\n  --tailwind                  déplace dimensions, fill, stroke et opacité en classes\n  --current-color             remplace les couleurs par currentColor\n",
+  "err.unknown": "commande inconnue : %s",
+  "err.args": "arguments invalides, consultez --help",
+  "err.generic": "erreur : %v",
+  "err.hook_exists": "un autre hook pre-commit existe déjà, utilisez --force pour le remplacer",
+  "err.no_svg": "aucun fichier .svg dans %s",
+  "scan.clean": "Aucun secret trouvé.",
+  "scan.found": "%d secret(s) potentiel(s) trouvé(s).",
+  "scan.tip": "Renouvelez toute clé réelle, puis supprimez-la. Utilisez \"nosub:allow\" sur la ligne pour les faux positifs.",
+  "scan.commit": "commit %s",
+  "scan.envfile": "fichier env suivi par git",
+  "hook.installed": "hook pre-commit installé.",
+  "hook.removed": "hook pre-commit supprimé.",
+  "example.written": "%s généré.",
+  "gitignore.updated": ".gitignore mis à jour.",
+  "gitignore.ok": ".gitignore couvre déjà les fichiers .env.",
+  "schema.written": "%s généré (%d tables, environ %d tokens).",
+  "svg.written": "%d composant(s) généré(s) dans %s."
+}

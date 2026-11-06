@@ -1,0 +1,23 @@
+{
+  "help.main": "nosub %s - pequenas ferramentas locais de dev, sem conta, sem assinatura\n\nUso:\n  nosub env     evita que segredos cheguem ao git\n  nosub schema  exporta o schema do banco para Markdown legível por LLMs\n  nosub svg     converte arquivos SVG em componentes limpos JSX ou Tailwind\n  nosub version exibe a versão\n\nExecute \"nosub <comando> --help\" para detalhes.\nUse --lang <código> ou NOSUB_LANG para mudar o idioma (%s).\n",
+  "help.env": "Uso:\n  nosub env scan [caminho]    varre uma pasta em busca de segredos\n    --staged                  apenas o que está no stage para commit\n    --history                 todos os commits do repositório\n    --json                    saída estruturada em JSON\n  nosub env hook install      bloqueia commits indevidos com pre-commit hook\n    --force                   substitui um hook existente\n  nosub env hook uninstall    remove o hook\n  nosub env example           cria .env.example a partir de .env sem os valores\n    --in <arquivo>            arquivo de origem (padrão .env)\n    --out <arquivo>           arquivo de destino (padrão .env.example)\n  nosub env gitignore         adiciona regras do .env ao .gitignore\n\nIgnore falsos positivos com \"nosub:allow\" na linha, ou liste caminhos no .nosubignore.\nCódigos de saída: 0 limpo, 1 segredos encontrados, 2 erro.\n",
+  "help.schema": "Uso:\n  nosub schema <alvo> [flags]\n\nAlvos:\n  app.db                      arquivo SQLite\n  dump.sql                    saída do pg_dump, mysqldump ou .schema do sqlite\n  -                           SQL via stdin\n  postgres://user:pw@host/db  requer pg_dump no PATH\n  mysql://user:pw@host/db     requer mysqldump no PATH\n\nFlags:\n  -o <arquivo>                escreve em arquivo em vez do stdout\n  --compact                   uma linha por tabela, sem tipos\n  --only <a,b>                apenas estas tabelas (aceita globs)\n  --exclude <a,b>             ignora estas tabelas (aceita globs)\n",
+  "help.svg": "Uso:\n  nosub svg <arquivo.svg|pasta|-> [flags]\n\nFlags:\n  -o <caminho>                arquivo de saída, ou pasta ao converter diretório\n  --name <Nome>               nome do componente (padrão: derivado do arquivo)\n  --ts                        TSX com props tipadas\n  --tailwind                  move dimensões, fill, stroke e opacidade para classes\n  --current-color             substitui cores por currentColor\n",
+  "err.unknown": "comando desconhecido: %s",
+  "err.args": "argumentos inválidos, consulte --help",
+  "err.generic": "erro: %v",
+  "err.hook_exists": "já existe outro pre-commit hook instalado, use --force para substituir",
+  "err.no_svg": "nenhum arquivo .svg encontrado em %s",
+  "scan.clean": "Nenhum segredo encontrado.",
+  "scan.found": "%d possível(is) segredo(s) encontrado(s).",
+  "scan.tip": "Rotacione credenciais reais e remova-as do código. Use \"nosub:allow\" na linha para falsos positivos.",
+  "scan.commit": "commit %s",
+  "scan.envfile": "arquivo env rastreado pelo git",
+  "hook.installed": "pre-commit hook instalado.",
+  "hook.removed": "pre-commit hook removido.",
+  "example.written": "%s gerado.",
+  "gitignore.updated": ".gitignore atualizado.",
+  "gitignore.ok": ".gitignore já cobre arquivos .env.",
+  "schema.written": "%s gerado (%d tabelas, cerca de %d tokens).",
+  "svg.written": "%d componente(s) gravado(s) em %s."
+}

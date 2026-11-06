@@ -1,0 +1,23 @@
+{
+  "help.main": "nosub %s - małe lokalne narzędzia dev, bez konta, bez subskrypcji\n\nUżycie:\n  nosub env     zapobiega trafieniu sekretów do gita\n  nosub schema  eksportuje schemat bazy do Markdowna dla LLM\n  nosub svg     konwertuje pliki SVG na czyste komponenty JSX lub Tailwind\n  nosub version wyświetla wersję\n\nUruchom \"nosub <polecenie> --help\", aby zobaczyć szczegóły.\nUżyj --lang <kod> lub NOSUB_LANG, aby zmienić język (%s).\n",
+  "help.env": "Użycie:\n  nosub env scan [ścieżka]    skanuje katalog w poszukiwaniu sekretów\n    --staged                  tylko pliki w stagingu do commitu\n    --history                 każdy commit w historii repozytorium\n    --json                    wyjście w formacie JSON\n  nosub env hook install      blokuje niebezpieczne commity hookiem pre-commit\n    --force                   zastępuje istniejący hook\n  nosub env hook uninstall    usuwa hook\n  nosub env example           tworzy .env.example z .env bez wartości\n    --in <plik>               plik źródłowy (domyślnie .env)\n    --out <plik>              plik docelowy (domyślnie .env.example)\n  nosub env gitignore         dodaje reguły .env do .gitignore\n\nIgnoruj false positive dodając \"nosub:allow\" w linii, lub wskaż ścieżki w .nosubignore.\nKody wyjścia: 0 czysto, 1 znaleziono sekrety, 2 błąd.\n",
+  "help.schema": "Użycie:\n  nosub schema <cel> [flagi]\n\nCele:\n  app.db                      plik SQLite\n  dump.sql                    zrzut z pg_dump, mysqldump lub sqlite .schema\n  -                           SQL ze standardowego wejścia (stdin)\n  postgres://user:pw@host/db  wymaga pg_dump w PATH\n  mysql://user:pw@host/db     wymaga mysqldump w PATH\n\nFlagi:\n  -o <plik>                   zapisz do pliku zamiast stdout\n  --compact                   jedna linia na tabelę, bez typów\n  --only <a,b>                tylko wybrane tabele (obsługuje globy)\n  --exclude <a,b>             pomiń te tabele (obsługuje globy)\n",
+  "help.svg": "Użycie:\n  nosub svg <plik.svg|katalog|-> [flagi]\n\nFlagi:\n  -o <ścieżka>                plik wyjściowy lub katalog przy konwersji folderu\n  --name <Nazwa>              nazwa komponentu (domyślnie: z nazwy pliku)\n  --ts                        TSX z otypowanymi propsami\n  --tailwind                  przenieś rozmiar, fill, stroke i opacity do klas\n  --current-color             zamień kolory na currentColor\n",
+  "err.unknown": "nieznane polecenie: %s",
+  "err.args": "błędne argumenty, zobacz --help",
+  "err.generic": "błąd: %v",
+  "err.hook_exists": "inny hook pre-commit już istnieje, użyj --force, aby go zastąpić",
+  "err.no_svg": "brak plików .svg w %s",
+  "scan.clean": "Nie znaleziono żadnych sekretów.",
+  "scan.found": "Znaleziono potencjalne sekrety: %d.",
+  "scan.tip": "Zrotuj prawdziwe klucze i usuń je z kodu. Użyj \"nosub:allow\" w danej linii w przypadku false positive.",
+  "scan.commit": "commit %s",
+  "scan.envfile": "plik env śledzony przez git",
+  "hook.installed": "hook pre-commit zainstalowany.",
+  "hook.removed": "hook pre-commit usunięty.",
+  "example.written": "zapisano %s.",
+  "gitignore.updated": "zaktualizowano .gitignore.",
+  "gitignore.ok": ".gitignore uwzględnia już pliki .env.",
+  "schema.written": "zapisano %s (%d tabel, około %d tokenów).",
+  "svg.written": "zapisano komponenty: %d w %s."
+}

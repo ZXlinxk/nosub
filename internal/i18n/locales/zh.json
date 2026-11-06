@@ -1,0 +1,23 @@
+{
+  "help.main": "nosub %s - 本地轻量开发工具，无账号，无订阅\n\n用法：\n  nosub env     防止密钥泄露到 git\n  nosub schema  将数据库 schema 导出为适合 LLM 的 Markdown\n  nosub svg     将 SVG 文件转换为干净的 JSX 或 Tailwind 组件\n  nosub version 打印版本信息\n\n运行 \"nosub <command> --help\" 查看详情。\n使用 --lang <code> 或 NOSUB_LANG 更改语言 (%s)。\n",
+  "help.env": "用法：\n  nosub env scan [路径]       扫描文件夹中的密钥\n    --staged                  仅扫描暂存区 (staged) 中的文件\n    --history                 扫描仓库中的所有 commit 历史\n    --json                    输出机器可读的 JSON 格式\n  nosub env hook install      使用 pre-commit hook 拦截违规 commit\n    --force                   覆盖已存在的 hook\n  nosub env hook uninstall    移除 hook\n  nosub env example           从 .env 生成去除敏感值的 .env.example\n    --in <文件>               源文件（默认 .env）\n    --out <文件>              目标文件（默认 .env.example）\n  nosub env gitignore         将 .env 规则添加到 .gitignore\n\n在行尾添加 \"nosub:allow\" 可忽略误报，或在 .nosubignore 中添加忽略路径。\n退出码：0 正常，1 发现密钥，2 错误。\n",
+  "help.schema": "用法：\n  nosub schema <目标> [flags]\n\n目标：\n  app.db                      SQLite 文件\n  dump.sql                    pg_dump、mysqldump 或 sqlite .schema 的输出\n  -                           来自 stdin 的 SQL\n  postgres://user:pw@host/db  需要 PATH 中存在 pg_dump\n  mysql://user:pw@host/db     需要 PATH 中存在 mysqldump\n\n选项：\n  -o <文件>                   写入文件而非标准输出 stdout\n  --compact                   每张表一行，不包含字段类型\n  --only <a,b>                仅导出这些表（支持 glob 通配符）\n  --exclude <a,b>             排除这些表（支持 glob 通配符）\n",
+  "help.svg": "用法：\n  nosub svg <文件.svg|文件夹|-> [flags]\n\n选项：\n  -o <路径>                   输出文件，或批量转换时的输出目录\n  --name <名称>               组件名称（默认：取自文件名）\n  --ts                        生成带类型 props 的 TSX\n  --tailwind                  将尺寸、fill、stroke 和透明度转换为 class 类名\n  --current-color             将颜色替换为 currentColor\n",
+  "err.unknown": "未知命令：%s",
+  "err.args": "参数错误，请参阅 --help",
+  "err.generic": "错误：%v",
+  "err.hook_exists": "已存在其他 pre-commit hook，使用 --force 进行覆盖",
+  "err.no_svg": "%s 中未找到 .svg 文件",
+  "scan.clean": "未发现密钥。",
+  "scan.found": "发现 %d 处疑似密钥。",
+  "scan.tip": "请重置真实的凭证并从代码中彻底移除。若是误报可在行尾添加 \"nosub:allow\"。",
+  "scan.commit": "commit %s",
+  "scan.envfile": "已被 git 跟踪的 env 文件",
+  "hook.installed": "pre-commit hook 已安装。",
+  "hook.removed": "pre-commit hook 已移除。",
+  "example.written": "已生成 %s。",
+  "gitignore.updated": ".gitignore 已更新。",
+  "gitignore.ok": ".gitignore 已包含 .env 相关规则。",
+  "schema.written": "已生成 %s（%d 张表，约 %d tokens）。",
+  "svg.written": "已将 %d 个组件写入 %s。"
+}

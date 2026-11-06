@@ -1,0 +1,23 @@
+{
+  "help.main": "nosub %s - küçük yerel geliştirici araçları, hesap yok, abonelik yok\n\nKullanım:\n  nosub env     gizli anahtarların git'e sızmasını engeller\n  nosub schema  veritabanı şemasını LLM'ler için Markdown olarak dışa aktarır\n  nosub svg     SVG dosyalarını temiz JSX veya Tailwind bileşenlerine dönüştürür\n  nosub version sürüm bilgisini yazdırır\n\nAyrıntılar için \"nosub <komut> --help\" çalıştırın.\nDili değiştirmek için --lang <kod> veya NOSUB_LANG kullanın (%s).\n",
+  "help.env": "Kullanım:\n  nosub env scan [dizin]      bir klasörü gizli anahtarlar için tarar\n    --staged                  yalnızca commit için hazırlanan (staged) dosyalar\n    --history                 depodaki tüm commit geçmişi\n    --json                    makine tarafından okunabilir JSON çıktısı\n  nosub env hook install      hatalı commit'leri bir pre-commit hook ile engeller\n    --force                   mevcut bir hook'un üzerine yazar\n  nosub env hook uninstall    hook'u kaldırır\n  nosub env example           .env dosyasından değerler olmadan .env.example üretir\n    --in <dosya>              kaynak dosya (varsayılan .env)\n    --out <dosya>             hedef dosya (varsayılan .env.example)\n  nosub env gitignore         .gitignore dosyasına .env kurallarını ekler\n\nYanlış alarmları satıra \"nosub:allow\" ekleyerek susturun veya yolları .nosubignore'a yazın.\nÇıkış kodları: 0 temiz, 1 anahtar bulundu, 2 hata.\n",
+  "help.schema": "Kullanım:\n  nosub schema <hedef> [bayraklar]\n\nHedefler:\n  app.db                      SQLite dosyası\n  dump.sql                    pg_dump, mysqldump veya sqlite .schema çıktısı\n  -                           stdin üzerinden SQL\n  postgres://user:pw@host/db  PATH içinde pg_dump gerektirir\n  mysql://user:pw@host/db     PATH içinde mysqldump gerektirir\n\nBayraklar:\n  -o <dosya>                  stdout yerine bir dosyaya yazar\n  --compact                   tablo başına bir satır, veri tipleri olmadan\n  --only <a,b>                yalnızca bu tablolar (glob desenleri desteklenir)\n  --exclude <a,b>             bu tabloları atla (glob desenleri desteklenir)\n",
+  "help.svg": "Kullanım:\n  nosub svg <dosya.svg|klasör|-> [bayraklar]\n\nBayraklar:\n  -o <dizin>                  çıktı dosyası ya da klasör dönüştürülüyorsa hedef klasör\n  --name <Ad>                 bileşen adı (varsayılan: dosya adından türetilir)\n  --ts                        tipli prop'lara sahip TSX\n  --tailwind                  boyut, fill, stroke ve opaklığı class'lara taşır\n  --current-color             renkleri currentColor ile değiştirir\n",
+  "err.unknown": "bilinmeyen komut: %s",
+  "err.args": "geçersiz argümanlar, --help sayfasına bakın",
+  "err.generic": "hata: %v",
+  "err.hook_exists": "farklı bir pre-commit hook zaten var, üzerine yazmak için --force kullanın",
+  "err.no_svg": "%s içinde .svg dosyası bulunamadı",
+  "scan.clean": "Gizli anahtar bulunamadı.",
+  "scan.found": "%d olası gizli anahtar bulundu.",
+  "scan.tip": "Gerçek anahtarları hemen geçersiz kılın (rotate) ve kaldırın. Yanlış alarmlar için satıra \"nosub:allow\" ekleyin.",
+  "scan.commit": "commit %s",
+  "scan.envfile": "git tarafından takip edilen env dosyası",
+  "hook.installed": "pre-commit hook yüklendi.",
+  "hook.removed": "pre-commit hook kaldırıldı.",
+  "example.written": "%s yazıldı.",
+  "gitignore.updated": ".gitignore güncellendi.",
+  "gitignore.ok": ".gitignore zaten .env dosyalarını kapsıyor.",
+  "schema.written": "%s yazıldı (%d tablo, yaklaşık %d token).",
+  "svg.written": "%d bileşen %s içine yazıldı."
+}

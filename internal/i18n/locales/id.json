@@ -1,0 +1,23 @@
+{
+  "help.main": "nosub %s - perkakas dev lokal yang ringan, tanpa akun, tanpa langganan\n\nPenggunaan:\n  nosub env     mencegah secret masuk ke git\n  nosub schema  ekspor skema database ke Markdown untuk LLM\n  nosub svg     ubah file SVG menjadi komponen JSX atau Tailwind yang bersih\n  nosub version tampilkan versi\n\nJalankan \"nosub <perintah> --help\" untuk detailnya.\nGunakan --lang <kode> atau NOSUB_LANG untuk mengubah bahasa (%s).\n",
+  "help.env": "Penggunaan:\n  nosub env scan [jalur]      pindai folder untuk mendeteksi secret\n    --staged                  hanya perubahan yang ada di staging commit\n    --history                 seluruh commit dalam riwayat repositori\n    --json                    output dalam format JSON\n  nosub env hook install      cegah bad commit dengan pre-commit hook\n    --force                   timpa hook yang sudah ada\n  nosub env hook uninstall    hapus hook\n  nosub env example           buat .env.example dari .env tanpa nilainya\n    --in <file>               file sumber (default .env)\n    --out <file>              file tujuan (default .env.example)\n  nosub env gitignore         tambahkan aturan .env ke .gitignore\n\nAbaikan false positive dengan \"nosub:allow\" pada baris, atau daftarkan path di .nosubignore.\nKode keluar: 0 bersih, 1 secret ditemukan, 2 error.\n",
+  "help.schema": "Penggunaan:\n  nosub schema <target> [flag]\n\nTarget:\n  app.db                      file SQLite\n  dump.sql                    output pg_dump, mysqldump, atau .schema sqlite\n  -                           SQL dari stdin\n  postgres://user:pw@host/db  membutuhkan pg_dump di PATH\n  mysql://user:pw@host/db     membutuhkan mysqldump di PATH\n\nFlag:\n  -o <file>                   tulis ke file alih-alih stdout\n  --compact                   satu baris per tabel, tanpa tipe data\n  --only <a,b>                hanya tabel ini (mendukung glob)\n  --exclude <a,b>             lewati tabel ini (mendukung glob)\n",
+  "help.svg": "Penggunaan:\n  nosub svg <file.svg|folder|-> [flag]\n\nFlag:\n  -o <jalur>                  file output, atau folder jika mengonversi direktori\n  --name <Nama>               nama komponen (default: dari nama file)\n  --ts                        TSX dengan props bertipe data\n  --tailwind                  pindahkan ukuran, fill, stroke, dan opasitas ke class\n  --current-color             ganti warna dengan currentColor\n",
+  "err.unknown": "perintah tidak dikenal: %s",
+  "err.args": "argumen salah, lihat --help",
+  "err.generic": "error: %v",
+  "err.hook_exists": "pre-commit hook lain sudah ada, gunakan --force untuk menimpanya",
+  "err.no_svg": "tidak ada file .svg di %s",
+  "scan.clean": "Tidak ada secret yang ditemukan.",
+  "scan.found": "%d potensi secret ditemukan.",
+  "scan.tip": "Rotasi secret yang valid, lalu hapus dari kode. Gunakan \"nosub:allow\" pada baris untuk false positive.",
+  "scan.commit": "commit %s",
+  "scan.envfile": "file env dilacak oleh git",
+  "hook.installed": "pre-commit hook terpasang.",
+  "hook.removed": "pre-commit hook dihapus.",
+  "example.written": "%s berhasil ditulis.",
+  "gitignore.updated": ".gitignore diperbarui.",
+  "gitignore.ok": ".gitignore sudah mencakup file .env.",
+  "schema.written": "%s berhasil ditulis (%d tabel, sekitar %d token).",
+  "svg.written": "%d komponen berhasil ditulis ke %s."
+}

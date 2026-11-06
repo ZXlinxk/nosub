@@ -1,0 +1,23 @@
+{
+  "help.main": "nosub %s - छोटे लोकल देव टूल्स, बिना अकाउंट, बिना सब्सक्रिप्शन\n\nउपयोग:\n  nosub env     सीक्रेट्स को git में जाने से रोकता है\n  nosub schema  LLMs के लिए डेटाबेस स्कीमा को Markdown में एक्सपोर्ट करता है\n  nosub svg     SVG फाइलों को साफ JSX या Tailwind कंपोनेंट्स में बदलता है\n  nosub version वर्जन प्रिंट करता है\n\nविस्तृत जानकारी के लिए \"nosub <कमांड> --help\" चलाएं।\nभाषा बदलने के लिए --lang <कोड> या NOSUB_LANG का उपयोग करें (%s)।\n",
+  "help.env": "उपयोग:\n  nosub env scan [पथ]         सीक्रेट्स खोजने के लिए किसी फ़ोल्डर को स्कैन करें\n    --staged                  केवल वही जो कमिट के लिए स्टेज किया गया है\n    --history                 रिपॉजिटरी का प्रत्येक कमिट इतिहास\n    --json                    मशीन द्वारा पढ़ने योग्य JSON आउटपुट\n  nosub env hook install      pre-commit हुक के साथ गलत कमिट को ब्लॉक करें\n    --force                   मौजूदा हुक को बदलें\n  nosub env hook uninstall    हुक को हटाएं\n  nosub env example           वैल्यू के बिना .env से .env.example लिखें\n    --in <फ़ाइल>              सोर्स फ़ाइल (डिफ़ॉल्ट .env)\n    --out <फ़ाइल>             टारगेट फ़ाइल (डिफ़ॉल्ट .env.example)\n  nosub env gitignore         .gitignore में .env नियम जोड़ें\n\nफॉल्स पॉजिटिव को शांत करने के लिए लाइन में \"nosub:allow\" जोड़ें, या .nosubignore में पाथ लिस्ट करें।\nएग्जिट कोड: 0 क्लीन, 1 सीक्रेट्स मिले, 2 एरर।\n",
+  "help.schema": "उपयोग:\n  nosub schema <टारगेट> [फ्लैग्स]\n\nटारगेट्स:\n  app.db                      SQLite फ़ाइल\n  dump.sql                    pg_dump, mysqldump या sqlite .schema आउटपुट\n  -                           stdin से SQL\n  postgres://user:pw@host/db  PATH में pg_dump की आवश्यकता है\n  mysql://user:pw@host/db     PATH में mysqldump की आवश्यकता है\n\nफ्लैग्स:\n  -o <फ़ाइल>                  stdout के बजाय फ़ाइल में लिखें\n  --compact                   प्रति टेबल एक लाइन, बिना प्रकारों के\n  --only <a,b>                केवल ये टेबल (globs अनुमत हैं)\n  --exclude <a,b>             ये टेबल छोड़ें (globs अनुमत हैं)\n",
+  "help.svg": "उपयोग:\n  nosub svg <फ़ाइल.svg|फ़ोल्डर|-> [फ्लैग्स]\n\nफ्लैग्स:\n  -o <पथ>                     आउटपुट फ़ाइल, या फ़ोल्डर कनवर्ट करते समय आउटपुट फ़ोल्डर\n  --name <नाम>                कंपोनेंट का नाम (डिफ़ॉल्ट: फ़ाइल नाम से)\n  --ts                        टाइप किए गए प्रॉप्स के साथ TSX\n  --tailwind                  आकार, fill, stroke और opacity को क्लासेज में बदलें\n  --current-color             रंगों को currentColor से बदलें\n",
+  "err.unknown": "अज्ञात कमांड: %s",
+  "err.args": "गलत तर्क, --help देखें",
+  "err.generic": "त्रुटि: %v",
+  "err.hook_exists": "एक अलग pre-commit हुक पहले से मौजूद है, इसे बदलने के लिए --force का उपयोग करें",
+  "err.no_svg": "%s में कोई .svg फ़ाइल नहीं है",
+  "scan.clean": "कोई सीक्रेट नहीं मिला।",
+  "scan.found": "%d संभावित सीक्रेट मिले।",
+  "scan.tip": "वास्तविक क्रेडेंशियल्स को रोटेट करें और फिर हटाएं। फॉल्स पॉजिटिव के लिए लाइन में \"nosub:allow\" का उपयोग करें।",
+  "scan.commit": "कमिट %s",
+  "scan.envfile": "git द्वारा ट्रैक की गई env फ़ाइल",
+  "hook.installed": "pre-commit हुक इंस्टॉल हो गया।",
+  "hook.removed": "pre-commit हुक हटा दिया गया।",
+  "example.written": "%s लिख दिया गया।",
+  "gitignore.updated": ".gitignore अपडेट हो गया।",
+  "gitignore.ok": ".gitignore में पहले से ही .env फ़ाइलें शामिल हैं।",
+  "schema.written": "%s लिखा गया (%d टेबल्स, लगभग %d टोकन)।",
+  "svg.written": "%d कंपोनेंट %s में लिखे गए।"
+}

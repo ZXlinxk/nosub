@@ -1,0 +1,23 @@
+{
+  "help.main": "nosub %s - small local dev tools, no account, no subscription\n\nUsage:\n  nosub env     stop secrets from reaching git\n  nosub schema  export a database schema to Markdown for LLMs\n  nosub svg     turn SVG files into clean JSX or Tailwind components\n  nosub version print the version\n\nRun \"nosub <command> --help\" for details.\nUse --lang <code> or NOSUB_LANG to change the language (%s).\n",
+  "help.env": "Usage:\n  nosub env scan [path]       scan a folder for secrets\n    --staged                  only what is staged for commit\n    --history                 every commit in the repository\n    --json                    machine readable output\n  nosub env hook install      block bad commits with a pre-commit hook\n    --force                   replace an existing hook\n  nosub env hook uninstall    remove the hook\n  nosub env example           write .env.example from .env without the values\n    --in <file>               source file (default .env)\n    --out <file>              target file (default .env.example)\n  nosub env gitignore         add .env rules to .gitignore\n\nSilence a false positive with \"nosub:allow\" on the line, or list paths in .nosubignore.\nExit codes: 0 clean, 1 secrets found, 2 error.\n",
+  "help.schema": "Usage:\n  nosub schema <target> [flags]\n\nTargets:\n  app.db                      SQLite file\n  dump.sql                    pg_dump, mysqldump or sqlite .schema output\n  -                           SQL from stdin\n  postgres://user:pw@host/db  needs pg_dump in PATH\n  mysql://user:pw@host/db     needs mysqldump in PATH\n\nFlags:\n  -o <file>                   write to a file instead of stdout\n  --compact                   one line per table, no types\n  --only <a,b>                only these tables (globs allowed)\n  --exclude <a,b>             skip these tables (globs allowed)\n",
+  "help.svg": "Usage:\n  nosub svg <file.svg|folder|-> [flags]\n\nFlags:\n  -o <path>                   output file, or folder when converting a folder\n  --name <Name>               component name (default: from the file name)\n  --ts                        TSX with typed props\n  --tailwind                  move size, fill, stroke and opacity to classes\n  --current-color             replace colors with currentColor\n",
+  "err.unknown": "unknown command: %s",
+  "err.args": "wrong arguments, see --help",
+  "err.generic": "error: %v",
+  "err.hook_exists": "a different pre-commit hook already exists, use --force to replace it",
+  "err.no_svg": "no .svg files in %s",
+  "scan.clean": "No secrets found.",
+  "scan.found": "%d possible secret(s) found.",
+  "scan.tip": "Rotate anything real, then remove it. Use \"nosub:allow\" on the line for false positives.",
+  "scan.commit": "commit %s",
+  "scan.envfile": "env file tracked by git",
+  "hook.installed": "pre-commit hook installed.",
+  "hook.removed": "pre-commit hook removed.",
+  "example.written": "%s written.",
+  "gitignore.updated": ".gitignore updated.",
+  "gitignore.ok": ".gitignore already covers .env files.",
+  "schema.written": "%s written (%d tables, about %d tokens).",
+  "svg.written": "%d component(s) written to %s."
+}

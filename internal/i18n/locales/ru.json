@@ -1,0 +1,23 @@
+{
+  "help.main": "nosub %s - компактные локальные dev-утилиты, без аккаунтов и подписок\n\nИспользование:\n  nosub env     предотвращает утечку секретов в git\n  nosub schema  экспортирует схему базы данных в Markdown для LLM\n  nosub svg     преобразует файлы SVG в чистые компоненты JSX или Tailwind\n  nosub version выводит версию\n\nЗапустите \"nosub <команда> --help\" для подробностей.\nИспользуйте --lang <код> или NOSUB_LANG для смены языка (%s).\n",
+  "help.env": "Использование:\n  nosub env scan [путь]       сканирует папку на наличие секретов\n    --staged                  только файлы, добавленные в индекс для коммита\n    --history                 каждый коммит в истории репозитория\n    --json                    машиночитаемый вывод в JSON\n  nosub env hook install      блокирует опасные коммиты через pre-commit хук\n    --force                   заменяет существующий хук\n  nosub env hook uninstall    удаляет хук\n  nosub env example           создает .env.example из .env без значений\n    --in <файл>               исходный файл (по умолчанию .env)\n    --out <файл>              целевой файл (по умолчанию .env.example)\n  nosub env gitignore         добавляет правила для .env в .gitignore\n\nДля ложных срабатываний добавьте \"nosub:allow\" в строку или укажите пути в .nosubignore.\nКоды возврата: 0 чисто, 1 найдены секреты, 2 ошибка.\n",
+  "help.schema": "Использование:\n  nosub schema <источник> [флаги]\n\nИсточники:\n  app.db                      файл SQLite\n  dump.sql                    дамп pg_dump, mysqldump или вывод sqlite .schema\n  -                           SQL из stdin\n  postgres://user:pw@host/db  требует pg_dump в PATH\n  mysql://user:pw@host/db     требует mysqldump в PATH\n\nФлаги:\n  -o <файл>                   запись в файл вместо stdout\n  --compact                   одна строка на таблицу, без типов\n  --only <a,b>                только указанные таблицы (поддерживает маски)\n  --exclude <a,b>             исключить указанные таблицы (поддерживает маски)\n",
+  "help.svg": "Использование:\n  nosub svg <файл.svg|папка|-> [флаги]\n\nФлаги:\n  -o <путь>                   выходной файл, или папка при конвертации каталога\n  --name <Имя>                имя компонента (по умолчанию: из имени файла)\n  --ts                        TSX с типизированными пропсами\n  --tailwind                  переносит размеры, fill, stroke и opacity в классы\n  --current-color             заменяет цвета на currentColor\n",
+  "err.unknown": "неизвестная команда: %s",
+  "err.args": "неверные аргументы, см. --help",
+  "err.generic": "ошибка: %v",
+  "err.hook_exists": "уже установлен другой pre-commit хук, используйте --force для перезаписи",
+  "err.no_svg": "в %s нет файлов .svg",
+  "scan.clean": "Секреты не найдены.",
+  "scan.found": "Найдено возможных секретов: %d.",
+  "scan.tip": "Смените настоящие ключи и удалите их из кода. Добавьте \"nosub:allow\" в строку при ложных срабатываниях.",
+  "scan.commit": "коммит %s",
+  "scan.envfile": "env-файл отслеживается в git",
+  "hook.installed": "pre-commit хук установлен.",
+  "hook.removed": "pre-commit хук удален.",
+  "example.written": "файл %s записан.",
+  "gitignore.updated": ".gitignore обновлен.",
+  "gitignore.ok": ".gitignore уже содержит правила для .env.",
+  "schema.written": "файл %s записан (таблиц: %d, около %d токенов).",
+  "svg.written": "компонентов записано: %d в %s."
+}

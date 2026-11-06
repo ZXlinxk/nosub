@@ -1,0 +1,23 @@
+{
+  "help.main": "nosub %s - 로컬용 경량 개발 도구, 계정 없음, 구독 없음\n\n사용법:\n  nosub env     비밀 정보가 git에 커밋되는 것을 방지\n  nosub schema  LLM에 붙여넣기 좋은 Markdown으로 DB 스키마 추출\n  nosub svg     SVG 파일을 깔끔한 JSX 또는 Tailwind 컴포넌트로 변환\n  nosub version 버전 출력\n\n자세한 내용은 \"nosub <명령어> --help\"를 실행하세요.\n언어를 변경하려면 --lang <코드> 또는 NOSUB_LANG을 사용하세요 (%s).\n",
+  "help.env": "사용법:\n  nosub env scan [경로]       폴더에서 비밀 정보 스캔\n    --staged                  커밋을 위해 스테이징된 변경 사항만 검사\n    --history                 저장소의 전체 커밋 히스토리 검사\n    --json                    기계 판독 가능한 JSON 출력\n  nosub env hook install      pre-commit 훅으로 잘못된 커밋 차단\n    --force                   기존 훅 덮어쓰기\n  nosub env hook uninstall    훅 제거\n  nosub env example           .env에서 실제 값을 제외하고 .env.example 생성\n    --in <파일>               원본 파일 (기본값 .env)\n    --out <파일>              대상 파일 (기본값 .env.example)\n  nosub env gitignore         .gitignore에 .env 규칙 추가\n\n해당 줄에 \"nosub:allow\"를 추가하여 오탐을 무시하거나 .nosubignore에 경로를 지정하세요.\n종료 코드: 0 안전, 1 비밀 정보 발견, 2 오류.\n",
+  "help.schema": "사용법:\n  nosub schema <대상> [플래그]\n\n대상:\n  app.db                      SQLite 파일\n  dump.sql                    pg_dump, mysqldump 또는 sqlite .schema 출력\n  -                           stdin을 통한 SQL\n  postgres://user:pw@host/db  PATH에 pg_dump 필요\n  mysql://user:pw@host/db     PATH에 mysqldump 필요\n\n플래그:\n  -o <파일>                   stdout 대신 파일로 저장\n  --compact                   타입 없이 테이블당 한 줄로 요약\n  --only <a,b>                지정한 테이블만 포함 (glob 패턴 지원)\n  --exclude <a,b>             지정한 테이블 제외 (glob 패턴 지원)\n",
+  "help.svg": "사용법:\n  nosub svg <파일.svg|폴더|-> [플래그]\n\n플래그:\n  -o <경로>                   출력 파일, 또는 폴더 변환 시 대상 디렉토리\n  --name <이름>               컴포넌트 이름 (기본값: 파일명에서 추출)\n  --ts                        타입이 정의된 props를 사용하는 TSX\n  --tailwind                  크기, fill, stroke, 투명도를 클래스로 변환\n  --current-color             색상을 currentColor로 치환\n",
+  "err.unknown": "알 수 없는 명령어: %s",
+  "err.args": "잘못된 인자입니다, --help를 참고하세요",
+  "err.generic": "오류: %v",
+  "err.hook_exists": "다른 pre-commit 훅이 이미 존재합니다. 덮어쓰려면 --force를 사용하세요",
+  "err.no_svg": "%s에 .svg 파일이 없습니다",
+  "scan.clean": "비밀 정보가 발견되지 않았습니다.",
+  "scan.found": "%d개의 잠재적 비밀 정보가 발견되었습니다.",
+  "scan.tip": "실제 유출된 키는 즉시 교체(rotate)한 뒤 코드에서 제거하세요. 오탐은 해당 줄에 \"nosub:allow\"를 추가하세요.",
+  "scan.commit": "커밋 %s",
+  "scan.envfile": "git에 의해 추적되는 env 파일",
+  "hook.installed": "pre-commit 훅이 설치되었습니다.",
+  "hook.removed": "pre-commit 훅이 제거되었습니다.",
+  "example.written": "%s 생성 완료.",
+  "gitignore.updated": ".gitignore 업데이트 완료.",
+  "gitignore.ok": ".gitignore에 이미 .env 관련 규칙이 적용되어 있습니다.",
+  "schema.written": "%s 생성 완료 (%d개 테이블, 약 %d 토큰).",
+  "svg.written": "%d개 컴포넌트가 %s에 작성되었습니다."
+}

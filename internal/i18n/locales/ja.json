@@ -1,0 +1,23 @@
+{
+  "help.main": "nosub %s - 軽量なローカル開発ツール、アカウント不要、サブスクなし\n\n使い方:\n  nosub env     シークレットの git への混入を防止\n  nosub schema  データベーススキーマを LLM 向け Markdown にエクスポート\n  nosub svg     SVG ファイルをクリーンな JSX や Tailwind コンポーネントに変換\n  nosub version バージョンを表示\n\n詳細は \"nosub <command> --help\" を実行してください。\n言語を変更するには --lang <code> または NOSUB_LANG を使用 (%s)。\n",
+  "help.env": "使い方:\n  nosub env scan [path]       フォルダ内のシークレットをスキャン\n    --staged                  commit 用にステージされた差分のみ\n    --history                 リポジトリの全コミット履歴\n    --json                    機械可読な JSON 出力\n  nosub env hook install      pre-commit hook で危険なコミットをブロック\n    --force                   既存の hook を上書き\n  nosub env hook uninstall    hook を削除\n  nosub env example           .env から値を除去した .env.example を生成\n    --in <file>               入力ファイル (デフォルト .env)\n    --out <file>              出力ファイル (デフォルト .env.example)\n  nosub env gitignore         .gitignore に .env の除外ルールを追加\n\n誤検知は該当行に \"nosub:allow\" を記述するか、.nosubignore にパスを追加して無視。\n終了コード: 0 検知なし, 1 シークレット検知, 2 エラー。\n",
+  "help.schema": "使い方:\n  nosub schema <target> [flags]\n\n対象:\n  app.db                      SQLite ファイル\n  dump.sql                    pg_dump、mysqldump、または sqlite .schema の出力\n  -                           標準入力 (stdin) からの SQL\n  postgres://user:pw@host/db  PATH に pg_dump が必要\n  mysql://user:pw@host/db     PATH に mysqldump が必要\n\nフラグ:\n  -o <file>                   stdout ではなくファイルに出力\n  --compact                   型情報なし、テーブルあたり1行\n  --only <a,b>                指定テーブルのみ (glob 対応)\n  --exclude <a,b>             指定テーブルを除外 (glob 対応)\n",
+  "help.svg": "使い方:\n  nosub svg <file.svg|folder|-> [flags]\n\nフラグ:\n  -o <path>                   出力ファイル、またはフォルダ変換時の出力先フォルダ\n  --name <Name>               コンポーネント名 (デフォルト: ファイル名から生成)\n  --ts                        型付き props を持つ TSX\n  --tailwind                  サイズ、fill、stroke、opacity をクラスに変換\n  --current-color             色を currentColor に置換\n",
+  "err.unknown": "不明なコマンド: %s",
+  "err.args": "引数が不正です。--help を確認してください",
+  "err.generic": "エラー: %v",
+  "err.hook_exists": "別の pre-commit hook が既に存在します。上書きするには --force を使用してください",
+  "err.no_svg": "%s 内に .svg ファイルが見つかりません",
+  "scan.clean": "シークレットは見つかりませんでした。",
+  "scan.found": "%d 件の潜在的なシークレットが見つかりました。",
+  "scan.tip": "本物の認証情報は直ちに失効・ローテーションし、コードから削除してください。誤検知の場合は行内に \"nosub:allow\" を追加します。",
+  "scan.commit": "commit %s",
+  "scan.envfile": "git で追跡されている env ファイル",
+  "hook.installed": "pre-commit hook をインストールしました。",
+  "hook.removed": "pre-commit hook を削除しました。",
+  "example.written": "%s を出力しました。",
+  "gitignore.updated": ".gitignore を更新しました。",
+  "gitignore.ok": ".gitignore には既に .env ファイルの指定が含まれています。",
+  "schema.written": "%s を出力しました (%d テーブル、約 %d トークン)。",
+  "svg.written": "%d 個のコンポーネントを %s に出力しました。"
+}
